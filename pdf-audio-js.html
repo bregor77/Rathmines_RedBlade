@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- begin head -->		
+	<head>	
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="Buy the best drones on Ireland or build your own drone with quality parts from Mariusz Drone Online Store - Dublin Ireland - 01 844525" />
+
+		<!--below is the HTML5 Shiv to get HTML5 semantic tags working in IE9 or later-->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<![endif]-->
+
+		<title>PDF &amp; Audio Test | Mariusz Drone Online Shop &amp; Drone Services</title><!-- Title-->
+
+		<!-- Links to CSS General Style -->
+		<link rel="stylesheet" type="text/css" href="css/style-demo.css" />
+	</head><!-- end head -->
+	
+	<!-- start body -->	
+	<body onload="incrementCount(10)">
+		
+		<div class="container">
+			<div class="top-bar"><!-- start top bar -->
+				<a>Created by: <strong>Mariusz Kucharski in Notepad++</strong></a>
+				<span class="right">
+					<a>Photography &amp; Video by:<strong>Mariusz Kucharski</strong></a>
+					<a><strong>Rathmines College</strong></a>
+					<a><strong>Web Authoring </strong>6N2532</a>
+				</span>				
+				<div class="clr"></div>
+			</div><!-- end top bar -->
+			
+			<header class="bg-header">			
+				<img src="images/redBlade-logo.png" alt="logo for Mariusz Drone Online Shop" class="floatright logo"> 							
+				
+				<p class="buttons">
+					<a href="index.html">Home</a>
+					<a href="beginners-4column.html">Beginners</a>
+					<a href="advanced-3column.html">Advanced</a>					
+					<a href="industrial-2column.html">Industrial</a>
+					<a href="racing-2column-1row.html">Racing Drones</a>
+					<a href="about-slides.html">About</a>
+					<a href="contact-js.html">Contact</a>
+					<a class="current-page" href="pdf-audio-js.html">PDF &amp; Audio</a> <!-- pressed button effect -->
+				</p>
+				
+				<h1>RED BLADE AERIAL</h1>
+				<h2>Mariusz Drone Online Shop</h2>
+				<h4>Page 8 - <span>PDF & Audio Demo</span></h4>
+				<h5>Demonstration of PDF file and Audio Demo embed into Page</h5>				
+			</header>
+		</div>
+
+		<div class="main">		
+			<main>
+				<!-- Browse Detection -->
+				<div class="browse-detection">
+					<p> What is the name(s) of your browser? </p>
+					<button onclick="checkBrowser()"> Try it </button>
+					<p id="demo"> </p>
+				</div>	
+				
+				<!-- Audio-Demo -->
+				<div class="audio-demo">
+					<p>Demonstration of audio - ( mp3 file )</p>		
+					<p><img src="images/audio-img.jpg" alt="trollolo"></p>
+					<audio controls>
+					<source src="audio/audio-demo.mp3" type="audio/mp3" />
+					</audio>
+				</div>			
+			
+				<!-- <PDF file> -->
+				<div class="pdf">				
+					<p>Demonstration of PDF file embed into Page</p>
+					<iframe width="800" height="600" src="pdf/assignment.pdf"></iframe>				
+				</div>							
+			</main>
+		</div>
+
+		<!-- start of footer -->	
+		<footer>
+			<div class="main_container" id="id_main_container">
+				<div class="container_inner" id="display_div_id">
+				</div>
+			</div>
+			<p>&#9728; <strong>HIT COUNTER</strong> &#9728;</p>
+			<!-- <p><strong>Copyright &copy; 2020</strong> - Mariusz Kucharski</p> -->
+			<!-- <p><em>Rathmines College - ASC6 1 - Web Authoring</em></p>	 -->
+		</footer><!-- end of footer -->	
+	</body><!-- end of body -->	
+
+
+	
+	
+</html>
+
+<script> /*Java Script used to Browser Detection*/
+	function checkBrowser() {
+		if ((navigator.userAgent.indexOf("Opera") ||
+		navigator.userAgent.indexOf( 'OPR' )) != -1 )
+		{
+			alert( 'Opera' );
+			//or write to the page element demo, therefore preventing a popup
+			document.getElementById( "demo" ).innerHTML = "Opera" ;
+		}
+			else if (navigator.userAgent.indexOf( "Chrome" ) != -1 )
+		{
+			/*alert('Chrome');*/
+			document.getElementById("demo" ).innerHTML = "Chrome" ;
+		}
+			else if (navigator.userAgent.indexOf( "Safari" ) != -1)
+		{
+			alert( 'Safari' );
+		}
+			else if (navigator.userAgent.indexOf( "Firefox" ) != -1 )
+		{
+			alert( 'Firefox' );
+			document.getElementById( "demo" ).innerHTML = "Firefox" ;
+		}
+			else if ((navigator.userAgent.indexOf( "MSIE" ) != -1 ) ||
+			(!! document.documentMode == true )) //IF IE > 10
+		{
+			alert( 'IE' );
+		}
+			else
+		{
+			alert( 'unknown' );
+		}
+	}
+</script>		
+
+<script>/*Java Script used to Hit Counter*/
+	var counter_list = [10,10000,10000];
+	var str_counter_0 = counter_list[0];
+	var str_counter_1 = counter_list[1];
+	var str_counter_2 = counter_list[2];
+	var display_str = "";
+	var display_div = document.getElementById("display_div_id");
+
+	function incrementCount(current_count){
+		setInterval(function(){
+		// clear count
+		while (display_div.hasChildNodes()) {
+			display_div.removeChild(display_div.lastChild);
+		}
+		str_counter_0++;
+		if (str_counter_0 > 99) {
+			str_counter_0 = 10; // reset count
+			str_counter_1++;    // increase next count
+		}
+		if(str_counter_1>99999){
+			str_counter_2++;
+		}
+		display_str = str_counter_2.toString() + str_counter_1.toString() + str_counter_0.toString();
+		for (var i = 0; i < display_str.length; i++) {
+			var new_span = document.createElement('span');
+			new_span.className = 'num_tiles';
+			new_span.innerText = display_str[i];
+			display_div.appendChild(new_span);
+			}
+		},1000);
+	}
+</script>
+			

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!-- begin head -->		
+	<head>			
+		<meta charset="utf-8"/>				
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="description" content="Buy the best drones on Ireland or build your own drone with quality parts from Mariusz Drone Online Store - Dublin Ireland - 01 844525" />
+
+		<!--below is the HTML5 Shiv to get HTML5 semantic tags working in IE9 or later-->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<![endif]-->
+
+		<title>Contact us | Mariusz Drone Online Shop &amp; Drone Services in Ireland</title><!-- Title-->
+
+		<!-- Links to CSS General Style -->
+		<link rel="stylesheet" type="text/css" href="css/style-demo.css" />	
+	</head><!-- end head -->
+	
+	<!-- start body -->
+	<body id="page">
+		
+		<div class="container">
+			<div class="top-bar"><!-- start top bar -->
+				<a>Created by: <strong>Mariusz Kucharski in Notepad++</strong></a>
+				<span class="right">
+					<a>Photography &amp; Video by:<strong>Mariusz Kucharski</strong></a>
+					<a><strong>Rathmines College</strong></a>
+					<a><strong>Web Authoring </strong>6N2532</a>
+				</span>				
+				<div class="clr"></div>
+			</div><!-- end top bar -->
+			
+			<header class="bg-header">			
+				<img src="images/redBlade-logo.png" alt="logo for Mariusz Drone Online Shop" class="floatright logo">
+				
+				<p class="buttons">
+					<a href="index.html">Home</a>
+					<a href="beginners-4column.html">Beginners</a>
+					<a href="advanced-3column.html">Advanced</a>					
+					<a href="industrial-2column.html">Industrial</a>
+					<a href="racing-2column-1row.html">Racing Drones</a>
+					<a href="about-slides.html">About</a>
+					<a class="current-page" href="contact-js.html">Contact</a> <!-- pressed button effect -->
+					<a href="pdf-audio-js.html">PDF &amp; Audio</a>
+				</p>
+				
+				<h1>RED BLADE AERIAL</h1>
+				<h2>Mariusz Drone Online Shop</h2>
+				<h4>Page 7 - <span>Contact us</span></h4>
+				<h5>Demonstration of Java Script for using the Form and Google Map</h5>				
+			</header>
+		</div>		
+		
+		<main class="bg-map">			
+			<div class = "contact-container" >
+				<div style = "text-align:center" >
+					<h1> Contact Us </h1>
+					<p><strong>Click on the map to find our location</strong></p>
+				</div>
+					
+				<div class ="row">
+					<div class ="column2" >					
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9532.284547350759!2d-6.2652375!3d53.3240796!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x88721f47d0a4e7fe!2sRathmines%20College%20of%20Further%20Education!5e0!3m2!1sen!2sie!4v1582322703830!5m2!1sen!2sie" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>					
+					</div>
+
+					<div class = "column2" >
+						<form name = "contactForm" action = "/submit.php" onsubmit = "return checkForm()"
+							method = "post" >
+							<label for = "fname" > First Name </label>
+							<input type = "text" id ="fname" name="firstname" placeholder="Your name.." >
+							<label for = "lname" > Last Name </label>
+							<input type = "text" id ="lname" name="lastname" placeholder="Your last name.." >
+							<label for = "country" > Country </label>
+							<select id = "country" name = "country" >
+								<option value = "australia" > Ireland </option>
+								<option value = "canada" > Mexico </option>
+								<option value = "usa" > Argentina </option>
+							</select>
+							<label for = "email" > Email </label>
+							<input type = "email" id = "email" name = "email" placeholder = "Please Enter your Email" >
+							<label for = "message" > Message </label>
+							<textarea id = "message" name = "message" placeholder = "Enter your message.."
+							style = "height:170px" ></textarea>
+							<input type = "submit" value = "Submit" >
+						</form> 
+					</div>
+				</div>
+			</div>				
+		</main>	
+		
+		<!-- start of footer -->	
+		<footer>
+			<p><strong>Copyright &copy; 2020</strong> - Mariusz Kucharski</p>
+			<p><em>Rathmines College - ASC6 1 - Web Authoring</em></p>
+		</footer><!-- end of footer -->	
+	</body><!-- end of body -->	
+</html>
+
+<script>
+function checkForm()
+{
+var name = document.forms[ "contactForm" ][ "fname" ];
+var email = document.forms[ "contactForm" ][ "email" ];
+var what = document.forms[ "contactForm" ][ "message" ];
+if (name.value == "" )
+{
+window .alert( "Please enter your name." );
+name.focus();
+return false ;
+}
+if (email.value == "" ){
+window .alert( "Please enter a valid e-mail address." );
+email.focus();
+return false ;
+}
+if (email.value.indexOf( "@" , 0) < 0)
+{
+window .alert( "Please enter a valid e-mail address." );
+email.focus();
+return false ;
+}
+if (email.value.indexOf( "." , 0) < 0)
+{
+window .alert( "Please enter a valid e-mail address." );
+email.focus();
+return false ;
+}
+if (what.value < 5)
+{
+alert( "Please enter a proper message" );
+what.focus();
+return false ;
+}
+return true ;
+}</script>	
+			

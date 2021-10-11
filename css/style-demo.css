@@ -1,0 +1,616 @@
+* {box-sizing: border-box;}
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* CSS reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+
+html,body {
+	margin:0;
+	padding:0;
+	/* position: relative; */
+	/* min-height: 100%; */
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+fieldset,img { 
+	border:0;
+}
+
+/* Style inputs for "FORM" in Contact Page */
+input{
+	border:1px solid #b0b0b0;
+	padding:3px 5px 4px;
+	color:#979797;
+	width:190px;
+}
+
+input[type=text], select, textarea { /* text area style */
+	width : 100%;
+	padding : 12px;
+	border : 2px solid #b80000;
+	margin-top : 0px;
+	margin-bottom : 16px;
+	resize : vertical;
+	text-align:left;
+}
+
+input[type=submit] { /* button styling in idle */
+	cursor : pointer;
+	display: inline-block;
+	border: 1px solid #6d0019;
+	padding: 4px 10px 3px;
+	font-size: 16px;
+	line-height: 18px;
+	margin: 2px 3px;
+	font-weight: 800;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow:0px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: 5px 5px 5px rgba(0,0,0,9);
+	color:#fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #a90329;
+	background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+	background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: linear-gradient(to top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+}
+
+input[type=submit]:hover { /* hover button style */
+	background: linear-gradient(40deg, #6e0000, #dbdbdb, #6e0000);
+}
+
+input[type=submit]:active{ /* pressed button style */
+	background: #6d0019;
+	background: -moz-linear-gradient(top, #6d0019 0%, #8f0222 56%, #a90329 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6d0019), color-stop(56%,#8f0222), color-stop(100%,#a90329));
+	background: -webkit-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: -o-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: -ms-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: linear-gradient(to top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	-webkit-box-shadow: 0px 1px 1px rgba(255,255,255,0.9);
+	-moz-box-shadow:0px 1px 1px rgba(255,0,0,0.9);
+	box-shadow: 0px 5px 5px rgba(255,0,0,9);
+}/* End of Styling inputs for "FORM" in Contact Page */
+
+
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+
+ol,ul {
+	list-style:none;
+}
+
+caption,th {
+	text-align:left;
+}
+
+h1,h2,h3,h4,h5 {
+	font-size:100%;
+	font-weight:normal;
+}
+
+q:before,q:after {
+	content:'';
+}
+
+abbr,acronym { border:0;
+}
+
+
+body{ /* General Style for body */
+	font-family: Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	background: #000;
+	font-weight: 400;
+	font-size: 15px;
+	color: #aa3e03;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+
+footer { /* Style the footer */
+	color: black;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+	/* background: linear-gradient(70deg, #6cf, #FFFFFF, #6cf); */
+	/* background: linear-gradient(70deg, #c20000, #FFFFFF, #c20000); */
+	background: linear-gradient(70deg, #303030, #FFFFFF, #303030);
+    padding: 5px;
+	/* padding: 0px 0px 100px 0px; */    
+	position: fixed;
+	/* position: relative;	 */
+	/* position: absolute;	 */
+	bottom: 0;
+	width: 100%;
+	height: 50px;   /* Height of the footer */
+	margin: auto;
+	/* margin-bottom: -20px; */
+	flex-shrink: 0;
+	/* overflow: hidden; */
+}	
+
+.floatleft{
+	float:left
+}
+
+.floatright{
+	float:right
+}
+
+.ie7 body{
+	overflow:hidden;
+}
+
+a{
+	color: #333;
+	text-decoration: none;
+}
+
+.container{
+	position: relative;
+	text-align: center;
+}
+
+.clr{
+	clear: both;
+}
+
+.container > header{
+	padding: 30px 30px 10px 20px;
+	margin: 0px 0px 10px 0px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.container > header h1{
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	font-size: 45px;
+	line-height: 35px;
+	position: relative;
+	font-weight: 400;
+	color: #fff;
+	text-shadow: 5px 5px 5px rgba(0,0,0,9);
+    padding: 5px 0px 0px 0px;
+}
+
+.container > header h1 span{
+
+}
+
+.container > header h2, p.info{
+	font-size: 24px;
+	color: #f8f8f8;
+	text-shadow: 3px 3px 3px rgba(0,0,0,9);
+}
+
+.container > header h4, p.info{
+	font-size: 18px;
+	color: #FF0000;
+	text-shadow: 2px 2px 2px rgba(0,0,0,9);
+	padding: 5px 0px 0px 0px;
+}
+
+.container > header h5, p.info{
+	font-size: 18px;
+	font-style: italic;
+	color: #FF0000;
+	text-shadow: 1px 1px 1px rgba(0,0,0,9);
+	padding: 0px 0px 30px 0px;
+}
+
+/* Top-bar Line Style */
+.top-bar{
+	font-family: Arial, sans-serif;
+	line-height: 24px;
+	font-size: 11px;
+	width: 100%;
+	background: #000;
+	opacity: 0.9;
+	text-transform: uppercase;
+	z-index: 9999;
+	position: relative;
+	-moz-box-shadow: 1px 0px 2px #000;
+	-webkit-box-shadow: 1px 0px 2px #000;
+	box-shadow: 1px 0px 2px #000;
+}
+
+.top-bar a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #ddd;
+	display: block;
+	float: left;
+}
+
+.top-bar a:hover{
+	color: #fff;
+}
+
+.top-bar span.right{
+	float: right;
+}
+
+.top-bar span.right a{
+	float: none;
+	display: inline;
+}
+
+/* Style BUTTONS at top of each Page */
+p.buttons{
+	display: block;
+	padding: 15px 0px;
+}
+
+p.buttons a,
+p.buttons a.current-page,
+p.buttons a.current-page:hover{
+    display: inline-block;
+	border: 1px solid #6d0019;
+	padding: 4px 10px 3px;
+	font-size: 13px;
+	line-height: 18px;
+	margin: 2px 3px;
+	font-weight: 800;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow:0px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: 5px 5px 5px rgba(0,0,0,9);
+	color:#fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #a90329;
+	background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+	background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: linear-gradient(to top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+}
+
+p.buttons a:hover{
+	background: #6d0019;
+}
+
+p.buttons a:active{
+	background: #6d0019;
+	background: -moz-linear-gradient(top, #6d0019 0%, #8f0222 56%, #a90329 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6d0019), color-stop(56%,#8f0222), color-stop(100%,#a90329));
+	background: -webkit-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: -o-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: -ms-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: linear-gradient(to top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	-webkit-box-shadow: 0px 1px 1px rgba(255,255,255,0.9);
+	-moz-box-shadow:0px 1px 1px rgba(255,255,255,0.9);
+	box-shadow: 0px 5px 5px rgba(255,255,255,0.9);
+}
+
+p.buttons a.current-page,
+p.buttons a.current-page:hover{
+	color: #A5727D;
+	background: #6d0019;
+}/* END Style Buttons at top of each Page */
+
+
+/* Style "ADD TO CART" Button in Product Pages */
+.button-addtocart {
+	width : 180px;
+	text-align: center;
+	cursor : pointer;
+	display: inline-block;
+	border: 1px solid #6d0019;
+	padding: 4px 10px 3px;
+	font-size: 16px;
+	line-height: 18px;
+	margin: 22px 3px;
+	font-weight: 800;
+	-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow:0px 1px 1px rgba(0,0,0,0.1);
+	box-shadow: 5px 5px 5px rgba(0,0,0,1);
+	color:#fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #a90329;
+	background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a90329), color-stop(44%,#8f0222), color-stop(100%,#6d0019));
+	background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -o-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: -ms-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+	background: linear-gradient(to top, #a90329 0%,#8f0222 44%,#6d0019 100%);
+}
+.button-addtocart:hover {
+	background: linear-gradient(40deg, #6e0000, #dbdbdb, #6e0000);
+}
+.button-addtocart:active {
+	background: #6d0019;
+	background: -moz-linear-gradient(top, #6d0019 0%, #8f0222 56%, #a90329 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6d0019), color-stop(56%,#8f0222), color-stop(100%,#a90329));
+	background: -webkit-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: -o-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: -ms-linear-gradient(top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	background: linear-gradient(to top, #6d0019 0%,#8f0222 56%,#a90329 100%);
+	-webkit-box-shadow: 0px 1px 1px rgba(255,255,255,0.9);
+	-moz-box-shadow:0px 1px 1px rgba(255,0,0,0.9);
+	box-shadow: 0px 5px 5px rgba(255,0,0,1);
+}/* END Style "Add to Cart" Button in Product Pages */
+
+
+.bg-header{
+	/* background-color: #bec2cb; */
+	background: url('../images/background-drone-in-header.jpg') no-repeat;
+	background-size: cover;
+	/* margin: 0px 0px 10px 0px; */
+}
+
+.bg-map{
+	background:#fff;
+	margin:0 auto;
+	text-align:center;
+	padding: 0px 0px 70px 0px;
+}
+
+.main > main{
+	padding: 0px 0px 50px 0px;
+}
+
+.main > main, p.info{
+	color: #212121;	
+	background-color: white;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+}
+
+.header-slide, p.info{
+	padding: 10px 0px 10px 0px;
+	font-family: 'BebasNeueRegular';
+	font-size: 22px;
+	text-align: center;
+	color: black;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.contact-container, h1{
+	padding: 6px 0px 6px 0px;
+	font-family: 'BebasNeueRegular';
+	font-size: 22px;
+	text-align: center;
+	color: #b80000;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.contact-container, p.info{
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	text-align: center;
+	color: #212121;	
+}
+
+.main, a{color: #009191} /* this is a complintary colour of my primary green */
+.main, a:hover{color: red} /* hover is a pseudo class of the anchor tag selector */
+
+.video-header, p.info{  /* Style the header text on About Page */
+	padding: 30px 0px 0px 0px;
+	font-family: 'BebasNeueRegular';
+	font-size: 22px;
+	text-align: center;
+	color: #b80000;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.product-header, p.info{ /* Style the header text on Product Pages */
+	padding: 10px 0px 20px 0px;
+	font-family: 'BebasNeueRegular';
+	font-size: 22px;
+	text-align: center;
+	color: #b80000;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.pdf{ /* Style the header text on PDF section */
+	padding: 50px 0px 0px 0px;
+	font-family: 'BebasNeueRegular';
+	font-size: 22px;
+	text-align: center;
+	vertical-align: middle;
+	color: #b80000;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.audio-demo{ /* Style header text on Audio-Demo section */
+	padding: 20px 0px 0px 0px;
+	font-family: 'BebasNeueRegular';
+	font-size: 22px;
+	text-align: center;
+	vertical-align: middle;
+	color: #b80000;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+.browse-detection{ /* Style the header text on PDF&Audio Page */
+	padding: 10px 0px 0px 30px;
+	font-family: 'BebasNeueRegular';
+	font-size: 22px;
+	text-align: center;
+	vertical-align: middle;
+	color: #b80000;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+
+/* Create two, three or four equal columns that floats next to each other */
+.column2,.column3,.column4 {
+    float: left;
+    width: 25.00%;
+    padding: 10px;
+    min-height: 200px;
+}
+
+.column2,.column3 {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    min-height: 200px;
+}
+
+.column2 {
+	width:50%
+}
+
+.column2,.column3,.column4{
+text-align:center}
+
+/* Clear floats after the columns - this uses the after psuedo element to clear the floats */
+.row:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ****************************** */
+/* Start of middle slide settings */
+.slidershow{
+  width: 700px;
+  height: 400px;
+  overflow: hidden;  
+}
+.middle{
+  position: relative;
+  margin: auto;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%,-50%); */
+}
+.navigation{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar{
+  width: 50px;
+  height: 10px;
+  border: 2px solid #fff;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.bar:hover{
+  background: #fff;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,.next,.text {font-size: 11px}
+}
+/* End of middle-slide settings secttion */
+/* ******************************/
+
+/* RRESPONSIVE LAYOUT - changing the layout when the screen is less than 600 pixels width */
+@media (max-width: 600px) {
+	
+    .column2,.column3,.column4, input[type=submit] { /* makes columns stack on top of each other instead of next to each other*/
+        width: 100%;
+    }
+	.column2,.column3, input[type=submit] {
+        width: 100%;
+    }
+	.logo{
+		width:60px;
+	}
+	.main img{ /* resising image when screen is less that 600 pixels width*/
+		max-width: 100%;
+	}
+	.main iframe{ /* resising pdf form when screen is less that 600 pixels width*/
+		max-width: 100%;
+	}
+	.row iframe{ /* resising YT video when screen is less that 600 pixels width*/
+		/* padding: 20px 20px 20px 20px; */
+		max-width: 100%;
+	}
+	.row img{
+		max-width: 100%;
+	}
+	footer{ /* changing footer bg and font color when screen is less that 600 pixels width*/
+		background:red;
+		color:black;
+	}
+}
+
+/* Media Queries - adaptation to e.g. tablet resolution*/
+@media screen and (max-width: 767px) {
+	.container > header{
+		text-align: center;
+	}
+	p.buttons {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+}
